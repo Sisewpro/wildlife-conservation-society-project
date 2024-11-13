@@ -1,13 +1,8 @@
 <x-guest-layout>
-    <x-slot:tag_line>
-        Don't have an account? 
-        <a href="{{ route('register') }}" class="link link-hover">Create One.</a>
-    </x-slot:tag_line>
-
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}" class="card-body">
+    <form method="POST" action="{{ route('login') }}">
         @csrf
 
         <!-- Email Address -->

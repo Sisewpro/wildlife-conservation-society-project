@@ -1,10 +1,5 @@
 <x-guest-layout>
-    <x-slot:tag_line>
-        Already have an account? 
-        <a href="{{ route('login') }}" class="link link-hover">Login.</a>
-    </x-slot:tag_line>
-
-    <form method="POST" action="{{ route('register') }}" class="card-body">
+    <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->

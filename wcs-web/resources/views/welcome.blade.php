@@ -1,100 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wildlife Conservation Society</title>
-    <style>
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        background-color: #f2f2f2;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .logo {
-        width: 200px;
-        height: auto;
-    }
-
-    .title {
-        font-size: 32px;
-        margin-bottom: 20px;
-    }
-
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .image-container {
-        position: relative;
-        width: 300px;
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .button {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .button:hover {
-        background-color: #0069d9;
-    }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <img src="/logo.png" alt="Wildlife Conservation Society" class="logo">
-        <h1 class="title">Wildlife Conservation Society</h1>
-    </header>
-
-    <div class="container">
-        <div class="content">
-            @if(isset($images) && count($images) > 0)
-            @foreach($images as $image)
-            <div class="image-container">
-                <img src="{{ asset('storage/uploads/' . $image) }}" alt="Uploaded Image"
-                    style="max-width: 200px; max-height: 200px;">
+<x-app-layout>
+    <div
+        class="hero min-h-screen"
+        style="background-image: url(https://images.unsplash.com/photo-1545063914-a1a6ec821c88?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdpbGRsaWZlfGVufDB8fDB8fHww);">
+        <!-- style="background-image: url(https://wallpapercave.com/wp/wp9196969.jpg);" -->
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-md">
+            <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
+            <p class="mb-5">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
             </div>
-            @endforeach
-            @else
-            <p>No images uploaded yet.</p>
-            @endif
-
-            <button class="button">Learn More</button>
+        </div>
+    </div>
+    
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="/js/app.js"></script>
-</body>
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
 
-</html>
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>

@@ -2,7 +2,7 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'font-bold active'
+            ? 'font-bold hover:bg-success bg-success text-neutral'
             /* alternative active style
                 ? 'font-bold underline underline-offset-4 decoration-indigo-400' 
             */

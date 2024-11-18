@@ -1,7 +1,7 @@
 <nav 
     x-data="{ open: false, isHero: false, hasHero: false }" 
     x-init="
-            const heroElement = document.querySelector('.hero, .carousel');
+            const heroElement = document.querySelector('.hero');
             hasHero = !!heroElement;
             if (hasHero) {
                 window.addEventListener('scroll', () => {

@@ -37,7 +37,7 @@
                             {{ __('Dashboard') }}
                         </x-nav-link>
                         @else
-                        <x-nav-link href="/" class="font-bold active">
+                        <x-nav-link href="/" class="font-bold hover:bg-success bg-success text-neutral">
                             {{ __('Dashboard') }}
                         </x-nav-link>
                         @endauth

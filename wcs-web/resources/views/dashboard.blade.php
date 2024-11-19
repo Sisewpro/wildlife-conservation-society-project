@@ -22,10 +22,11 @@
         <div class="card w-96 mt-12 mx-5">
             @component('components.card')
                 @slot('imageUrl', 'https://images.unsplash.com/photo-1542181149-585bcf0d9ce9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMDYwNzA4MXx8ZW58MHx8fHx8') <!-- Ganti dengan URL gambar -->
-                @slot('title', 'Shoes!')
+                @slot('title', 'Example Title 1')
                 @slot('description', 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -36,6 +37,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -46,6 +48,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -56,6 +59,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
     </div>
@@ -69,6 +73,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -79,6 +84,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -89,6 +95,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -99,6 +106,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
     </div>
@@ -112,6 +120,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -122,6 +131,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -132,6 +142,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
 
@@ -142,6 +153,7 @@
                 @slot('description', 'If a dog chews shoes whose shoes does he choose?')
                 @slot('date', '2024-11-13')
                 @slot('location', 'New York')
+                @slot('user', 'John Doe')
             @endcomponent
         </div>
     </div>

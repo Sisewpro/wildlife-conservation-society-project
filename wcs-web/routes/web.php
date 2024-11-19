@@ -10,9 +10,9 @@ Route::get('/', function () {
 });
 
 // Dashboard (hanya untuk pengguna yang sudah terautentikasi dan terverifikasi)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ArticleController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 // Route untuk Profile
 Route::middleware('auth')->group(function () {

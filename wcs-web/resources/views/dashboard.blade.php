@@ -18,7 +18,21 @@
     <h1 class="text-5xl font-bold mt-24 px-6 sm:px-8 lg:px-12 md:flex lg:flex">Recent Uploads</h1>
 
     <div class="mx-auto px-14 sm:justify-items-center sm:px-16 lg:px-20 md:flex lg:flex">
+        <!-- Untuk memunculkan card -->
+        @foreach ($articles as $article)
+        <div class="card w-96 mt-12 mx-5">
+            <x-card 
+                :title="$article->title" 
+                :description="$article->content" 
+                :imageUrl="$article->file" 
+                :date="$article->date" 
+                :location="$article->location" 
+                :user="$article->user->name" 
+            />
+        </div>
+        @endforeach
 
+        <!-- di bawah ini data dummy nanti dihapus-->
         <div class="card w-96 mt-12 mx-5">
             @component('components.card')
                 @slot('imageUrl', 'https://images.unsplash.com/photo-1542181149-585bcf0d9ce9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMDYwNzA4MXx8ZW58MHx8fHx8') <!-- Ganti dengan URL gambar -->

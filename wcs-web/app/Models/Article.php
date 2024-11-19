@@ -16,7 +16,7 @@ class Article extends Model
         'time',
         'location',
         'content',
-        'file_path',
+        'file',
     ];
 
     // Relasi ke tabel users

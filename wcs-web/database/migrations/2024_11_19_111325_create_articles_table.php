@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->date('date'); // Tanggal artikel
             $table->time('time'); // Waktu artikel
             $table->string('location'); // Lokasi artikel
-            $table->text('content'); // Isi artikel
+            $table->text('content'); // Isi artikel termasuk deskripsi
             $table->string('file')->nullable(); // Path file (audio, video, atau foto)
             $table->timestamps();
         });

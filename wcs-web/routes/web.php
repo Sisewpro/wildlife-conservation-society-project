@@ -4,15 +4,19 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
-// Halaman Utama (Dashboard sebagai default)
+// Route untuk Dashboard default
 Route::get('/', function () {
     return view('dashboard');
 });
 
-// Dashboard (hanya untuk pengguna yang sudah terautentikasi dan terverifikasi)
-Route::get('/dashboard', [ArticleController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Route untuk Dashboard (Login)
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route untuk Artikel
+Route::get('/', [ArticleController::class, 'index'])->name('dashboard');
+Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
 
 // Route untuk Profile
 Route::middleware('auth')->group(function () {
@@ -21,10 +25,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route untuk Artikel
-Route::middleware('auth')->group(function () {
-    Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
-});
-
-// Include Routes untuk Auth
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

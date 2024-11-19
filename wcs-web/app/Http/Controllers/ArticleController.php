@@ -22,6 +22,7 @@ class ArticleController extends Controller
             'description' => 'required|string',
             'file' => 'nullable|file|mimes:jpg,png,jpeg,mp4,mp3|max:2048', // Validasi file opsional
             'date' => 'required|date',
+            'time' => 'required|date_format:H:i',
             'location' => 'required|string|max:255',
         ]);
 
@@ -37,6 +38,7 @@ class ArticleController extends Controller
             'content' => $request->description,
             'file' => $filePath,
             'date' => $request->date,
+            'time' => $request->time,
             'location' => $request->location,
             'user_id' => auth()->id(), // Ambil ID pengguna yang sedang login
         ]);

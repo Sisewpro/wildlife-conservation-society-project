@@ -159,5 +159,5 @@
     </div>
     
 
-    <div class="mt-24 pb-4 text-center"><p>Provided by Techno Net Copyright 2024.</p></div>
+    <div class="mt-24 pb-4 text-center"><p>Provided by Techno Net Copyright 2024 &copy;.</p></div>
 </x-app-layout>

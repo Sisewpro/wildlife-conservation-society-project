@@ -16,6 +16,7 @@ Route::get('/dashboard', function () {
 
 // Route untuk Artikel
 Route::get('/', [ArticleController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [ArticleController::class, 'index'])->name('dashboard');
 Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
 
 // Route untuk Profile

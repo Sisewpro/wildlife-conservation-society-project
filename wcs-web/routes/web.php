@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 
 // Route untuk Dashboard default
@@ -18,6 +19,17 @@ Route::get('/dashboard', function () {
 Route::get('/', [ArticleController::class, 'index'])->name('dashboard');
 Route::get('/dashboard', [ArticleController::class, 'index'])->name('dashboard');
 Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
+
+// Route untuk upload artikel
+Route::middleware(['auth'])->group(function () {
+    Route::get('/uploads', [ArticleController::class, 'create'])->name('upload.uploadArticle');
+    Route::post('/uploads', [ArticleController::class, 'store'])->name('upload.store');
+});
+
+// Route untuk menampilkan file hasil upload
+Route::get('/audios', [FileController::class, 'showAudios'])->name('audios.view');
+Route::get('/photos', [FileController::class, 'showPhotos'])->name('photos.view');
+Route::get('/videos', [FileController::class, 'showVideos'])->name('videos.view');
 
 // Route untuk Profile
 Route::middleware('auth')->group(function () {

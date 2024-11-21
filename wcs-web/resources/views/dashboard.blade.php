@@ -137,7 +137,23 @@
                     :date="$article->date" 
                     :location="$article->location" 
                     :user="$article->user->name" 
-                />
+                >
+                    @if (strpos($article->file, 'uploads/photos') !== false)
+                        <img src="{{ asset('storage/' . $article->file) }}" alt="Photo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    @elseif (strpos($article->file, 'uploads/videos') !== false)
+                        <video controls class="w-full h-full object-cover">
+                            <source src="{{ asset('storage/' . $article->file) }}" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                    @elseif (strpos($article->file, 'uploads/audios') !== false)
+                        <audio controls class="w-full mt-2">
+                            <source src="{{ asset('storage/' . $article->file) }}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    @else
+                        <p class="text-gray-400">No media available</p>
+                    @endif
+                </x-card>
             </div>
         @endforeach
     </div>

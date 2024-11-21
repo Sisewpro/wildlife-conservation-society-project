@@ -81,8 +81,8 @@ class ArticleController extends Controller
             'file' => $filePath, // Menyimpan path file
             'location' => $request->location,
             'user_id' => auth()->id(),
-            'date' => now(), // Tanggal saat ini
-            'time' => now()->format('H:i:s'), // Waktu saat ini dalam format jam:menit:detik
+            'date' => now()->format('Y-m-d'), // Tanggal saat ini
+            'time' => now()->format('H:i'), // Waktu saat ini dalam format jam:menit
         ]);        
 
         return redirect()->route('dashboard')->with('success', 'Article added successfully!');

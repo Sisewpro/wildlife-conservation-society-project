@@ -19,7 +19,7 @@
         </video>
     @elseif (strpos($file, 'uploads/audios') !== false)
         <!-- Tampilkan Audio -->
-        <audio controls class="w-full mt-2">
+        <audio class="w-full mt-2">
             <source src="{{ asset('storage/' . $file) }}" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
@@ -39,7 +39,7 @@
 
         <!-- Informasi Artikel di bagian bawah -->
         <div class="text-white mt-auto">
-            <h2 class="text-lg font-semibold">{{ Str::limit($title, 30, '...') }}</h2>
+            <h2 class="text-lg font-semibold">{{ Str::limit($title, 37, '...') }}</h2>
             <p class="mt-1 text-sm text-gray-200" x-text="displayDescription"></p>
             <p class="mt-2 text-xs text-gray-300">
                 {{ $date }} &bull; {{ $location }} &bull; {{ $user }}

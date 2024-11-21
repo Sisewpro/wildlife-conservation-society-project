@@ -43,9 +43,9 @@
                     <details>
                         <summary :class="hasHero && !isHero ? 'hover:font-bold' : ''">Discover</summary>
                         <ul class="p-2 w-52 text-base-content">
-                            <li><a href="{{ route('photos.view') }}">Photos</a></li>
-                            <li><a href="{{ route('videos.view') }}">Videos</a></li>
-                            <li><a href="{{ route('audios.view') }}">Audios</a></li>
+                            <li><x-dropdown-link href="{{ route('photos.view') }}" :active="request()->routeIs('photos.view')">Photos</x-dropdown-link></li>
+                            <li><x-dropdown-link href="{{ route('videos.view') }}" :active="request()->routeIs('videos.view')">Videos</x-dropdown-link></li>
+                            <li><x-dropdown-link href="{{ route('audios.view') }}" :active="request()->routeIs('audios.view')">Audios</x-dropdown-link></li>
                         </ul>
                     </details>
                 </li>

@@ -10,7 +10,7 @@ class ArticleController extends Controller
     // Menampilkan Dashboard dengan Artikel
     public function index()
     {
-        $articles = Article::with('user')->latest()->get(); // Ambil semua artikel dengan user terkait
+        $articles = Article::with('user')->latest()->take(12)->get(); // Ambil semua artikel dengan user terkait
         return view('dashboard', compact('articles'));
     }
 
@@ -18,6 +18,29 @@ class ArticleController extends Controller
     public function create()
     {
         return view('upload.uploadArticle'); // Pastikan view berada di resources/views/upload/uploadArticle.blade.php
+    }
+
+    public function showMedia($type)
+    {
+        // Tentukan folder berdasarkan jenis media
+        $folder = match ($type) {
+            'audios' => 'uploads/audios',
+            'photos' => 'uploads/photos',
+            'videos' => 'uploads/videos',
+            default => throw new \InvalidArgumentException('Invalid media type')
+        };
+
+        // Ambil semua file dari folder yang sesuai
+        $files = Storage::disk('public')->files($folder);
+
+        // Tentukan view berdasarkan jenis media
+        $view = match ($type) {
+            'audios' => 'viewupload.audios.audiosView',
+            'photos' => 'viewupload.photos.photosView',
+            'videos' => 'viewupload.videos.videosView',
+        };
+
+        return view($view, compact('files'));
     }
 
     // Menyimpan Artikel Baru

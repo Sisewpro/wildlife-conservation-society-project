@@ -30,6 +30,9 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/audios', [FileController::class, 'showAudios'])->name('audios.view');
 Route::get('/photos', [FileController::class, 'showPhotos'])->name('photos.view');
 Route::get('/videos', [FileController::class, 'showVideos'])->name('videos.view');
+Route::get('/media/{type}', [ArticleController::class, 'showMedia'])
+    ->where('type', 'audios|photos|videos')
+    ->name('media.show');
 
 // Route untuk Profile
 Route::middleware('auth')->group(function () {

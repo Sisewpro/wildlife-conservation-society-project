@@ -39,7 +39,7 @@
 
         <!-- Informasi Artikel di bagian bawah -->
         <div class="text-white mt-auto">
-            <h2 class="text-lg font-semibold">{{ $title }}</h2>
+            <h2 class="text-lg font-semibold">{{ Str::limit($title, 30, '...') }}</h2>
             <p class="mt-1 text-sm text-gray-200" x-text="displayDescription"></p>
             <p class="mt-2 text-xs text-gray-300">
                 {{ $date }} &bull; {{ $location }} &bull; {{ $user }}

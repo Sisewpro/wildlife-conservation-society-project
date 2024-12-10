@@ -53,7 +53,7 @@
                 </div>
 
                 <!-- Informasi Waktu dan Lokasi -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-b py-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-b py-6">
                     <!-- Waktu -->
                     <div>
                         <h1 class="text-xl font-medium text-gray-800">Date and time</h1>

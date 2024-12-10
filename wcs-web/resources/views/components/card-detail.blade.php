@@ -32,7 +32,7 @@
             </div>
         @endif
         <!-- Konten -->
-        <div class="max-w-screen-2xl bg-white overflow-hidden mx-12 mt-4 pt-5 shadow-lg rounded-lg">
+        <div class="max-w-screen-2xl bg-white overflow-hidden mx-12 mt-4 pt-4 shadow-lg rounded-lg">
             <div class="py-6 px-12 space-y-6">
                 <div class="flex justify-between items-center mb-4">
                     <!-- Judul dan User -->

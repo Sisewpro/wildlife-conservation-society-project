@@ -14,7 +14,7 @@
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
         <!-- Tombol View di tengah -->
         <div class="mt-20 inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="btn">
+            <button class="btn" onclick="location.href='{{ route('details', ['id' => $id]) }}'">
                 View
             </button>
         </div>

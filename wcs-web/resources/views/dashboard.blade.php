@@ -131,6 +131,7 @@
         @foreach ($articles as $article)
             <div class="card w-96 mt-12 mx-5">
                 <x-card 
+                    :id="$article->id"
                     :title="$article->title" 
                     :description="$article->content" 
                     :file="$article->file" 

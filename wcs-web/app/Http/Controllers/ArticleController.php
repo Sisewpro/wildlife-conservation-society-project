@@ -43,6 +43,23 @@ class ArticleController extends Controller
         return view($view, compact('files'));
     }
 
+    // Menampilkan halaman detail artikel
+    public function show($id)
+    {
+        $article = Article::findOrFail($id); // Ambil data artikel berdasarkan ID
+        return view('components.card-detail', [
+            'id' => $article->id,
+            'title' => $article->title,
+            'user' => $article->user->name ?? 'Unknown', // Pastikan relasi user ada
+            'date' => $article->created_at,
+            'time' => $article->time,
+            'location' => $article->location,
+            'content' => $article->content,
+            'file' => $article->file,
+        ]);
+    }
+
+
     // Menyimpan Artikel Baru
     public function store(Request $request)
     {

@@ -34,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/media/{type}', [ArticleController::class, 'showMedia'])
         ->where('type', 'audios|photos|videos')
         ->name('media.show');
+    Route::get('/article/{id}', [ArticleController::class, 'show'])->name('details');
 });
 
 // Route untuk Profile

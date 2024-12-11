@@ -1,6 +1,6 @@
 <div class="relative w-full h-64 rounded-lg overflow-hidden shadow-lg group"
     x-data="
-    { shortDescription: '{{ Str::limit($description, 20, '...') }}', longDescription: '{{ Str::limit($description, 75, '...') }}', displayDescription: '' }
+    { shortDescription: '{{ Str::limit($description, 20, '...') }}', longDescription: '{{ Str::limit($description, 75, '..') }}', displayDescription: '' }
      " 
     x-init="
     displayDescription = window.innerWidth >= 1280 ? longDescription : (window.innerWidth < 768 ? longDescription : shortDescription); 
@@ -20,11 +20,12 @@
         </div>
 
         <!-- Informasi Artikel di bagian bawah -->
-        <div class="text-white mt-auto">
-            <h2 class="text-lg font-semibold">{{ Str::limit($title, 37, '...') }}</h2>
-            <p class="mt-1 text-sm text-gray-200" x-text="displayDescription"></p>
+        <div class="text-white mt-auto px-2">
+            <h2 class="text-lg font-semibold pt-1">{{ Str::limit($title, 30, '..') }}</h2>
+            <p class="text-sm text-gray-200" x-text="displayDescription"></p>
             <p class="mt-2 text-xs text-gray-300">
-                {{ \Carbon\Carbon::parse($date)->format('d M Y') }} &bull; {{ $location }} &bull; {{ $user }}
+                {{ \Carbon\Carbon::parse($date)->format('d M Y') }} &bull; {{ $location }} 
+                <!-- &bull; {{ $user }} -->
             </p>
         </div>
     </div>

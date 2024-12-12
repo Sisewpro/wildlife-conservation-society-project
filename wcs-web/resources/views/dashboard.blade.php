@@ -1,17 +1,18 @@
 <x-app-layout>
     <div class="carousel w-full">
         <div id="slide1" class="carousel-item relative w-full">
-            <div class="hero min-h-screen"
+            <div
+                class="hero min-h-screen"
                 style="background-image: url(https://images.unsplash.com/photo-1545063914-a1a6ec821c88?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdpbGRsaWZlfGVufDB8fDB8fHww);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-neutral-content text-center">
                     <div class="max-w-md">
-                        <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
-                        <p class="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
+                    <p class="mb-5">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
@@ -21,17 +22,18 @@
             </div>
         </div>
         <div id="slide2" class="carousel-item relative w-full">
-            <div class="hero min-h-screen"
+        <div
+                class="hero min-h-screen"
                 style="background-image: url(https://images.unsplash.com/photo-1610447158291-d917870bf750?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8NGslMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-neutral-content text-center">
                     <div class="max-w-md">
-                        <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
-                        <p class="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
+                    <p class="mb-5">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
@@ -41,17 +43,18 @@
             </div>
         </div>
         <div id="slide3" class="carousel-item relative w-full">
-            <div class="hero min-h-screen"
+        <div
+                class="hero min-h-screen"
                 style="background-image: url(https://images.unsplash.com/photo-1427434991195-f42379e2139d?ixlib=rb-4.0.3);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-neutral-content text-center">
                     <div class="max-w-md">
-                        <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
-                        <p class="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
+                    <p class="mb-5">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
@@ -61,17 +64,18 @@
             </div>
         </div>
         <div id="slide4" class="carousel-item relative w-full">
-            <div class="hero min-h-screen"
+        <div
+                class="hero min-h-screen"
                 style="background-image: url(https://images.unsplash.com/photo-1721799671066-650447f5c112?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFpbiUyMGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-neutral-content text-center">
                     <div class="max-w-md">
-                        <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
-                        <p class="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-7xl font-bold">See Wildlife</h1>
+                    <p class="mb-5">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
@@ -119,20 +123,41 @@
             Add Article
         </button>
     </form> -->
-
+    
     <h1 class="text-5xl font-bold mt-24 px-6 sm:px-8 lg:px-12 md:flex lg:flex">Recent Uploads</h1>
 
     <div class="mx-auto px-14 sm:justify-items-center sm:px-16 lg:px-20 md:flex lg:flex">
         <!-- Untuk memunculkan card -->
         @foreach ($articles as $article)
-        <div class="card w-96 mt-12 mx-5">
-            <x-card :title="$article->title" :description="$article->content" :imageUrl="Storage::url($article->file)"
-                :date="$article->date" :location="$article->location" :user="$article->user->name" />
-        </div>
+            <div class="card w-96 mt-12 mx-5">
+                <x-card 
+                    :id="$article->id"
+                    :title="$article->title" 
+                    :description="$article->content" 
+                    :file="$article->file" 
+                    :date="$article->date" 
+                    :location="$article->location" 
+                    :user="$article->user->name" 
+                >
+                    @if (strpos($article->file, 'uploads/photos') !== false)
+                        <img src="{{ asset('storage/' . $article->file) }}" alt="Photo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    @elseif (strpos($article->file, 'uploads/videos') !== false)
+                        <video controls class="w-full h-full object-cover">
+                            <source src="{{ asset('storage/' . $article->file) }}" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                    @elseif (strpos($article->file, 'uploads/audios') !== false)
+                        <audio controls class="w-full mt-2">
+                            <source src="{{ asset('storage/' . $article->file) }}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    @else
+                        <p class="text-gray-400">No media available</p>
+                    @endif
+                </x-card>
+            </div>
         @endforeach
     </div>
 
-    <div class="mt-24 pb-4 text-center">
-        <p>Provided by Techno Net Copyright 2024 &copy;.</p>
-    </div>
+    <div class="mt-24 pb-4 text-center"><p>Provided by Techno Net Copyright 2024 &copy;.</p></div>
 </x-app-layout>

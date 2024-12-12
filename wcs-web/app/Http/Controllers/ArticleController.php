@@ -10,7 +10,7 @@ class ArticleController extends Controller
     // Menampilkan Dashboard dengan Artikel
     public function index()
     {
-        $articles = Article::with('user')->latest()->get(); // Ambil semua artikel dengan user terkait
+        $articles = Article::with('user')->latest()->take(12)->get(); // Ambil semua artikel dengan user terkait
         return view('dashboard', compact('articles'));
     }
 
@@ -19,6 +19,46 @@ class ArticleController extends Controller
     {
         return view('upload.uploadArticle'); // Pastikan view berada di resources/views/upload/uploadArticle.blade.php
     }
+
+    public function showMedia($type)
+    {
+        // Tentukan folder berdasarkan jenis media
+        $folder = match ($type) {
+            'audios' => 'uploads/audios',
+            'photos' => 'uploads/photos',
+            'videos' => 'uploads/videos',
+            default => throw new \InvalidArgumentException('Invalid media type')
+        };
+
+        // Ambil semua file dari folder yang sesuai
+        $files = Storage::disk('public')->files($folder);
+
+        // Tentukan view berdasarkan jenis media
+        $view = match ($type) {
+            'audios' => 'viewupload.audios.audiosView',
+            'photos' => 'viewupload.photos.photosView',
+            'videos' => 'viewupload.videos.videosView',
+        };
+
+        return view($view, compact('files'));
+    }
+
+    // Menampilkan halaman detail artikel
+    public function show($id)
+    {
+        $article = Article::findOrFail($id); // Ambil data artikel berdasarkan ID
+        return view('components.card-detail', [
+            'id' => $article->id,
+            'title' => $article->title,
+            'user' => $article->user->name ?? 'Unknown', // Pastikan relasi user ada
+            'date' => $article->created_at,
+            'time' => $article->time,
+            'location' => $article->location,
+            'content' => $article->content,
+            'file' => $article->file,
+        ]);
+    }
+
 
     // Menyimpan Artikel Baru
     public function store(Request $request)
@@ -58,8 +98,8 @@ class ArticleController extends Controller
             'file' => $filePath, // Menyimpan path file
             'location' => $request->location,
             'user_id' => auth()->id(),
-            'date' => now(), // Tanggal saat ini
-            'time' => now()->format('H:i:s'), // Waktu saat ini dalam format jam:menit:detik
+            'date' => now()->format('Y-m-d'), // Tanggal saat ini
+            'time' => now()->format('H:i'), // Waktu saat ini dalam format jam:menit
         ]);        
 
         return redirect()->route('dashboard')->with('success', 'Article added successfully!');

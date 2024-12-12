@@ -27,11 +27,15 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Route untuk menampilkan file hasil upload
-Route::get('/audios', [FileController::class, 'showAudios'])->name('audios.view');
-
-Route::get('/photos', [FileController::class, 'showPhotos'])->name('photos.view');
-
-Route::get('/videos', [FileController::class, 'showVideos'])->name('videos.view');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/audios', [FileController::class, 'showAudios'])->name('audios.view');
+    Route::get('/photos', [FileController::class, 'showPhotos'])->name('photos.view');
+    Route::get('/videos', [FileController::class, 'showVideos'])->name('videos.view');
+    Route::get('/media/{type}', [ArticleController::class, 'showMedia'])
+        ->where('type', 'audios|photos|videos')
+        ->name('media.show');
+    Route::get('/article/{id}', [ArticleController::class, 'show'])->name('details');
+});
 
 // Route untuk Profile
 Route::middleware('auth')->group(function () {

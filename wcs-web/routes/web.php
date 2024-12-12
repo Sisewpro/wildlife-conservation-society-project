@@ -28,7 +28,9 @@ Route::middleware(['auth'])->group(function () {
 
 // Route untuk menampilkan file hasil upload
 Route::get('/audios', [FileController::class, 'showAudios'])->name('audios.view');
+
 Route::get('/photos', [FileController::class, 'showPhotos'])->name('photos.view');
+
 Route::get('/videos', [FileController::class, 'showVideos'])->name('videos.view');
 
 // Route untuk Profile

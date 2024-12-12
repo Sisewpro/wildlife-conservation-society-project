@@ -23,6 +23,18 @@ class FileController extends Controller
         return view('viewupload.photos.photosView', compact('photos'));
     }
 
+    public function show($photo)
+    {
+        // Logika untuk mengambil detail foto (opsional)
+        $photoPath = "storage/$photo"; // Contoh jalur file
+        $photoName = basename($photo);
+
+        return view('photos.show', [
+            'photoName' => $photoName,
+            'photoPath' => $photoPath,
+        ]);
+    }
+
     // Menampilkan file video
     public function showVideos()
     {
